@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "436973355572",
+    "firebase_url": "https://css-student-deadline.firebaseio.com",
+    "project_id": "css-student-deadline",
+    "storage_bucket": "css-student-deadline.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:436973355572:android:7def47c64cecc807564061",
+        "android_client_info": {
+          "package_name": "com.example.acmcssdeadline"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "436973355572-44gv3jsepkn898uihmdfiiqrbbt43kch.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.acmcssdeadline",
+            "certificate_hash": "7dee2334242ba71186c42d22fc956e2be7752348"
+          }
+        },
+        {
+          "client_id": "436973355572-00m3vmjc43fmteg222rdbn04tjre0ho2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCP5ksAGyXS1JUk0LxoEjXOb5hHGH33xUI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "436973355572-00m3vmjc43fmteg222rdbn04tjre0ho2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
