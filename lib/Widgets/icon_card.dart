@@ -35,7 +35,10 @@ class IconCard extends StatelessWidget {
               padding: const EdgeInsets.all(5.0),
               child: Text(
                 text,
-                style: TextStyle(fontSize: 15.0,color: Colors.white,fontWeight: FontWeight.w500),
+                style: TextStyle(
+                    fontSize: 15.0,
+                    color: Colors.white,
+                    fontWeight: FontWeight.w500),
               ),
             )
           ],

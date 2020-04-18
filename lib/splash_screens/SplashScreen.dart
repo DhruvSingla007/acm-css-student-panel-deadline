@@ -55,7 +55,7 @@ class SplashScreenState extends State<AnimatedSplashScreen>
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               new Image.asset(
-                'images/logo1.png',
+                'assets/images/acm.png',
                 width: animation.value * 250,
                 height: animation.value * 250,
               ),

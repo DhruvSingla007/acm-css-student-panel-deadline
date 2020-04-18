@@ -4,7 +4,6 @@ import 'package:acmcssdeadline/Widgets/member_listTile.dart';
 import '../../constants.dart';
 
 class TeamMembersPage extends StatefulWidget {
-
   static const String routeName = "/team-members-page";
 
   @override
@@ -12,7 +11,6 @@ class TeamMembersPage extends StatefulWidget {
 }
 
 class _TeamMembersPageState extends State<TeamMembersPage> {
-
   final _fireStore = Firestore.instance;
 
   @override
@@ -34,10 +32,14 @@ class _TeamMembersPageState extends State<TeamMembersPage> {
                   final members = snapshot.data.documents;
                   List<IndMemberListTile> memberListTiles = [];
                   for (var member in members) {
-                    final memberName = member.data[firestoreTeamMemberNameLabel];
-                    final memberContact = member.data[firestoreTeamMemberContactLabel];
-                    final memberEmailID = member.data[firestoreTeamMemberEmailIDLabel];
-                    final memberPosition = member.data[firestoreTeamMemberPositionLabel];
+                    final memberName =
+                        member.data[firestoreTeamMemberNameLabel];
+                    final memberContact =
+                        member.data[firestoreTeamMemberContactLabel];
+                    final memberEmailID =
+                        member.data[firestoreTeamMemberEmailIDLabel];
+                    final memberPosition =
+                        member.data[firestoreTeamMemberPositionLabel];
                     final memberImageUrl = member.data[firestoreImageUrl];
 
                     final memberListTile = IndMemberListTile(

@@ -34,19 +34,18 @@ class _EventsPageState extends State<EventsPage> {
                     final eventDate = event.data[firestoreDateLabel];
 
                     final eventListTile = IndListTile(
-                      date: eventDate,
-                      name: eventName,
-                      onTapFunction: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => IndEventPage(
-                              documentSnapshot: event,
+                        date: eventDate,
+                        name: eventName,
+                        onTapFunction: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => IndEventPage(
+                                documentSnapshot: event,
+                              ),
                             ),
-                          ),
-                        );
-                      }
-                    );
+                          );
+                        });
 
                     eventListTiles.add(eventListTile);
                   }

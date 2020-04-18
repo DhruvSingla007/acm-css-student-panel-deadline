@@ -43,7 +43,7 @@ class _IntroPageState extends State<IntroPage> {
               return IntroItem(
                 title: titles[index],
                 subtitle: subtitles[index],
-                imageUrl: "images/c${index + 1}.jpg",
+                imageUrl: "assets/images/c${index + 1}.jpg",
               );
             },
           ),

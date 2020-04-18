@@ -28,15 +28,21 @@ class NewsListTile extends StatelessWidget {
                   width: MediaQuery.of(context).size.width,
                   child: CachedNetworkImage(
                     imageUrl: imageUrl,
-                    placeholder: (context, url) =>
-                        Center(child: Container(
-                          width: 100.0, height: 50.0, child: Center(child: Text(
-                          'Loading...',),),),),
+                    placeholder: (context, url) => Center(
+                      child: Container(
+                        width: 100.0,
+                        height: 50.0,
+                        child: Center(
+                          child: Text(
+                            'Loading...',
+                          ),
+                        ),
+                      ),
+                    ),
                     errorWidget: (context, url, error) => Icon(Icons.error),
                   ),
                 ),
               ),
-
               Padding(
                 padding: const EdgeInsets.only(
                   left: 8.0,
@@ -50,9 +56,9 @@ class NewsListTile extends StatelessWidget {
                       child: Text(
                         newsTitle,
                         textAlign: TextAlign.justify,
-                        style: TextStyle(fontWeight: FontWeight.bold,
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
                           fontSize: 18.0,
-
                         ),
                         //textAlign: TextAlign.justify,
                       ),
@@ -60,12 +66,10 @@ class NewsListTile extends StatelessWidget {
                   ),
                 ),
               ),
-
               Padding(
                 padding: const EdgeInsets.all(1.0),
                 child: Divider(),
               ),
-
               Padding(
                 padding: const EdgeInsets.only(
                   left: 8.0,

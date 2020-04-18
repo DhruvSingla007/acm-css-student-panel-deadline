@@ -2,11 +2,10 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 class ImageCards extends StatelessWidget {
-
   final String imageUrl;
 
   ImageCards({
-   @required this.imageUrl,
+    @required this.imageUrl,
   });
 
   @override
@@ -24,10 +23,15 @@ class ImageCards extends StatelessWidget {
             fit: BoxFit.fitHeight,
             //height: 300.0,
             imageUrl: imageUrl,
-            placeholder: (context, url) =>
-                Center(child: Container(
-                  width: 100.0, height: 50.0, child: Center(child: Text(
-                    'Loading...'),),),),
+            placeholder: (context, url) => Center(
+              child: Container(
+                width: 100.0,
+                height: 50.0,
+                child: Center(
+                  child: Text('Loading...'),
+                ),
+              ),
+            ),
             errorWidget: (context, url, error) => Icon(Icons.error),
           ),
         ),

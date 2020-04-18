@@ -10,10 +10,15 @@ Widget imageWidget({@required BuildContext context, @required String url}) {
         fit: BoxFit.fitHeight,
         //height: 300.0,
         imageUrl: url,
-        placeholder: (context, url) =>
-            Center(child: Container(
-              width: 100.0, height: 50.0, child: Center(child: Text(
-                'Loading...'),),),),
+        placeholder: (context, url) => Center(
+          child: Container(
+            width: 100.0,
+            height: 50.0,
+            child: Center(
+              child: Text('Loading...'),
+            ),
+          ),
+        ),
         errorWidget: (context, url, error) => Icon(Icons.error),
       ),
       //color: Colors.black,

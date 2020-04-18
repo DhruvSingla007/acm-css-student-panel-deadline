@@ -22,7 +22,6 @@ class MyApp extends StatelessWidget {
       theme: ThemeData.dark(),
       home: AnimatedSplashScreen(),
       debugShowCheckedModeBanner: false,
-
       routes: {
         LoginPage.routeName: (context) => LoginPage(),
         TabScreen.routeName: (context) => TabScreen(),

@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 const Color greenColor = Color(0xFF2AC0AF);
 
-const String appbarLabelHomePage = "IEEE Student Branch";
-const String facebookPageURL = "https://www.facebook.com/IEEEPEC/";
-const String instagramPageURL = "https://www.instagram.com/ieeepec/";
-const String twitterPageUrl = "https://twitter.com/ieee_pec?lang=en";
+const String appbarLabelHomePage = "PEC ACM";
+const String facebookPageURL = "https://www.facebook.com/" ;
+const String instagramPageURL = "https://www.instagram.com/";
+const String twitterPageUrl = "https://twitter.com/";
 
 const String facebookLogoPath = "assets/images/facebook.png";
 const String instagramLogoPath = "assets/images/instagram.png";
@@ -43,4 +43,4 @@ const String fireStoreDevelopmentTeamCollectionLabel = "developmentTeamMembers";
 
 const String fireStoreAttendanceUniqueKey = "UniqueKey";
 
-const String mainLogoImagePath = "assets/images/IEEE_main_logo.png";
+const String mainLogoImagePath = "assets/images/acm.png";

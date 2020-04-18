@@ -103,7 +103,7 @@ class _HomePageDrawerState extends State<HomePageDrawer> {
             function: () => Navigator.push(context,
                 MaterialPageRoute(builder: (context) => MyProfilePage())),
           ),
-  /*        Divider(),
+          /*        Divider(),
           _buildDrawerListTile(
             title: 'Past Events',
             icon: Icons.event,
@@ -117,42 +117,34 @@ class _HomePageDrawerState extends State<HomePageDrawer> {
             function: () => Navigator.push(context,
                 MaterialPageRoute(builder: (context) => SessionsPage())),
           ),
-
           Divider(),
-
           _buildDrawerListTile(
             title: 'Team',
             icon: Icons.group_work,
-            function: () => Navigator.pushNamed(context, TeamMembersPage.routeName),
+            function: () =>
+                Navigator.pushNamed(context, TeamMembersPage.routeName),
           ),
-
           Divider(),
-
           _buildDrawerListTile(
             title: 'App Coordinator',
             icon: Icons.code,
             function: () => Navigator.push(context,
                 MaterialPageRoute(builder: (context) => AppCoordinatorsPage())),
           ),
-
           Divider(),
-
           _buildDrawerListTile(
             title: 'Sponsors',
             icon: Icons.info_outline,
-            function: () => Navigator.pushNamed(context, SponsorsPage.routeName),
+            function: () =>
+                Navigator.pushNamed(context, SponsorsPage.routeName),
           ),
-
           Divider(),
-
           _buildDrawerListTile(
             title: 'About',
             icon: Icons.info_outline,
             function: () => Navigator.pushNamed(context, AboutPage.routeName),
           ),
-
           Divider(),
-
           SizedBox(
             height: 40.0,
           ),

@@ -21,7 +21,7 @@ Widget infoListView({
 }) {
   return ListView(
     children: <Widget>[
-      imageWidget(context: context,url: imageUrl),
+      imageWidget(context: context, url: imageUrl),
       indNameLabel(name: name),
       indHostLabel(hostName: hostName),
       Column(

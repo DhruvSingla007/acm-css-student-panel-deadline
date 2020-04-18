@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-Widget indNameLabel({@required String name}){
+Widget indNameLabel({@required String name}) {
   return Padding(
     padding: const EdgeInsets.all(8.0),
     child: Text(

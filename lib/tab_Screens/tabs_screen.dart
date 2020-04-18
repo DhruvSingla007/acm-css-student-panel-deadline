@@ -6,7 +6,6 @@ import 'package:acmcssdeadline/pages/workshops/workshops_page.dart';
 import 'package:flutter/material.dart';
 
 class TabScreen extends StatefulWidget {
-
   static const String routeName = "/tab-screen";
 
   @override
@@ -14,25 +13,24 @@ class TabScreen extends StatefulWidget {
 }
 
 class _TabScreenState extends State<TabScreen> {
-
-  final List<Map<String, Object>>_pages = [
+  final List<Map<String, Object>> _pages = [
     {
-      'page' : NewsPage(),
-      'appBarTitle' : 'Timeline' ,
+      'page': NewsPage(),
+      'appBarTitle': 'Timeline',
     },
     {
-      'page' : EventsPage(),
-      'appBarTitle' : 'Events' ,
+      'page': EventsPage(),
+      'appBarTitle': 'Events',
     },
     {
-      'page' : WorkshopsPage(),
-      'appBarTitle' : 'Workshops' ,
+      'page': WorkshopsPage(),
+      'appBarTitle': 'Workshops',
     },
   ];
 
   int _selectedPageIndex = 0;
 
-  void _selectPage(int index){
+  void _selectPage(int index) {
     setState(() {
       _selectedPageIndex = index;
     });
@@ -45,29 +43,20 @@ class _TabScreenState extends State<TabScreen> {
         centerTitle: true,
         title: Text(_pages[_selectedPageIndex]['appBarTitle']),
       ),
-
       drawer: HomePageDrawer(),
-
       bottomNavigationBar: BottomNavigationBar(
         onTap: _selectPage,
         unselectedItemColor: Colors.white,
         selectedItemColor: greenColor,
         currentIndex: _selectedPageIndex,
         type: BottomNavigationBarType.shifting,
-
         items: [
           BottomNavigationBarItem(
-              icon: Icon(Icons.near_me),
-              title: Text('Feed')
-          ),
+              icon: Icon(Icons.near_me), title: Text('Feed')),
           BottomNavigationBarItem(
-            icon: Icon(Icons.event),
-            title: Text('Events')
-          ),
+              icon: Icon(Icons.event), title: Text('Events')),
           BottomNavigationBarItem(
-              icon: Icon(Icons.work),
-              title: Text('Workshops')
-          ),
+              icon: Icon(Icons.work), title: Text('Workshops')),
         ],
       ),
       body: _pages[_selectedPageIndex]['page'],
