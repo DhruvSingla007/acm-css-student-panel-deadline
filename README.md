@@ -1,4 +1,4 @@
-<img src="assets/images/acm.png" align="right" />
+<!--<img src="assets/images/acm.png" align="right" />-->
 
 # ACM CSS Application
 
