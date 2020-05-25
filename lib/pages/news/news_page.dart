@@ -5,7 +5,6 @@ import 'package:acmcssdeadline/Widgets/ind_news_tile.dart';
 import '../../constants.dart';
 
 class NewsPage extends StatefulWidget {
-
   static const String routeName = "/news-page";
 
   @override
@@ -13,7 +12,6 @@ class NewsPage extends StatefulWidget {
 }
 
 class _NewsPageState extends State<NewsPage> {
-
   final _fireStore = Firestore.instance;
 
   @override
@@ -33,8 +31,8 @@ class _NewsPageState extends State<NewsPage> {
                   for (var news in newsList) {
                     final newsImageUrl = news.data[firestoreImageUrl];
                     final newsTitle = news.data[firestoreNewsTitleLabel];
-                    final newsDescription = news.data[firestoreNewsDescriptionLabel];
-
+                    final newsDescription =
+                        news.data[firestoreNewsDescriptionLabel];
 
                     final newsListTile = NewsListTile(
                       imageUrl: newsImageUrl,

@@ -12,7 +12,6 @@ class WorkshopsPage extends StatefulWidget {
 }
 
 class _WorkshopsPageState extends State<WorkshopsPage> {
-
   final _fireStore = Firestore.instance;
 
   @override

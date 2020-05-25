@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:acmcssdeadline/constants.dart';
 
-Widget aboutLineText({@required String info, @required BuildContext context,}) {
+Widget aboutLineText({
+  @required String info,
+  @required BuildContext context,
+}) {
   return Column(
     children: <Widget>[
       Container(
@@ -23,9 +26,9 @@ Widget aboutLineText({@required String info, @required BuildContext context,}) {
               child: Text(
                 info,
                 textAlign: TextAlign.justify,
-                style: TextStyle(fontWeight: FontWeight.bold,
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
                   fontSize: 18.0,
-
                 ),
                 //textAlign: TextAlign.justify,
               ),

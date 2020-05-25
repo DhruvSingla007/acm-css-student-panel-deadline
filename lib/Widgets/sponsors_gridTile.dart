@@ -17,10 +17,17 @@ Widget SponsorsGridTile({
               flex: 4,
               child: CachedNetworkImage(
                 imageUrl: imageUrl,
-                placeholder: (context, url) =>
-                    Center(child: Container(
-                      width: 100.0, height: 50.0, child: Center(child: Text(
-                      'Loading...',),),),),
+                placeholder: (context, url) => Center(
+                  child: Container(
+                    width: 100.0,
+                    height: 50.0,
+                    child: Center(
+                      child: Text(
+                        'Loading...',
+                      ),
+                    ),
+                  ),
+                ),
                 errorWidget: (context, url, error) => Icon(Icons.error),
               ),
             ),
@@ -29,7 +36,10 @@ Widget SponsorsGridTile({
             flex: 1,
             child: Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Text(sponsorName,style: TextStyle(color: Colors.white),),
+              child: Text(
+                sponsorName,
+                style: TextStyle(color: Colors.white),
+              ),
             ),
           ),
         ],

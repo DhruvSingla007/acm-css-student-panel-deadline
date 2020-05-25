@@ -9,7 +9,6 @@ import 'package:acmcssdeadline/tab_Screens/tabs_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class LoginPage extends StatefulWidget {
-
   static const String routeName = "/login-page";
 
   @override
@@ -120,8 +119,7 @@ class _LoginPageState extends State<LoginPage> {
               )
             ],
           );
-        }
-    );
+        });
   }
 
   // Checks if the user is already signed in
@@ -250,7 +248,7 @@ class _LoginPageState extends State<LoginPage> {
           horizontal: 10.0,
         ),
         children: <Widget>[
-          mainLogoLoginPage('assets/images/IEEE_main_logo.png'),
+          mainLogoLoginPage('assets/images/acm.png'),
           Form(
             key: _studentLoginFormKey,
             child: Column(
@@ -316,7 +314,8 @@ class _LoginPageState extends State<LoginPage> {
                 buttons(
                   function: () {
                     _checkInternetConnection();
-                    if (_studentLoginFormKey.currentState.validate() && isConnected) {
+                    if (_studentLoginFormKey.currentState.validate() &&
+                        isConnected) {
                       //print("Valid");
                       handleSignIn();
                     }
@@ -336,11 +335,16 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                   ),
                 ),
-
-                isLoading ? Container(
-                  child: Text(
-                    'Please wait', style: TextStyle(color: greenColor,),),
-                ) : Container(),
+                isLoading
+                    ? Container(
+                        child: Text(
+                          'Please wait',
+                          style: TextStyle(
+                            color: greenColor,
+                          ),
+                        ),
+                      )
+                    : Container(),
               ],
             ),
           ),

@@ -34,10 +34,17 @@ class IndMemberListTile extends StatelessWidget {
                   child: CachedNetworkImage(
                     imageUrl: imageUrl,
                     fit: BoxFit.cover,
-                    placeholder: (context, url) =>
-                        Center(child: Container(
-                          width: 100.0, height: 50.0, child: Center(child: Text(
-                          'Loading...',),),),),
+                    placeholder: (context, url) => Center(
+                      child: Container(
+                        width: 100.0,
+                        height: 50.0,
+                        child: Center(
+                          child: Text(
+                            'Loading...',
+                          ),
+                        ),
+                      ),
+                    ),
                     errorWidget: (context, url, error) => Icon(Icons.error),
                   ),
                 ),

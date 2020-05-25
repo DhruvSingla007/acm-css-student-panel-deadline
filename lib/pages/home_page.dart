@@ -16,7 +16,6 @@ import 'events_page.dart';
 import 'news/news_page.dart';
 import 'sessions/sessions_page.dart';
 
-
 class HomePage extends StatefulWidget {
   static const String routeName = "/home-page";
 
@@ -25,7 +24,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-
   String notificationText = "No new notifications";
 
   String imageCarouselUrl_1 = "";
@@ -47,7 +45,8 @@ class _HomePageState extends State<HomePage> {
       isLoading = true;
     });
 
-    DocumentReference docRef = Firestore.instance.collection('notifications')
+    DocumentReference docRef = Firestore.instance
+        .collection('notifications')
         .document('currentNotifications');
     DocumentSnapshot docSnapshot = await docRef.get();
 
@@ -61,13 +60,12 @@ class _HomePageState extends State<HomePage> {
   }
 
   Future<void> getCarouselImages() async {
-
     setState(() {
       isLoading = true;
     });
 
-    DocumentReference docRef = Firestore.instance.collection('carouselsImages')
-        .document('images');
+    DocumentReference docRef =
+        Firestore.instance.collection('carouselsImages').document('images');
     DocumentSnapshot docSnapshot = await docRef.get();
 
     setState(() {
@@ -84,13 +82,12 @@ class _HomePageState extends State<HomePage> {
   }
 
   Future<void> getUpcomingEventsImages() async {
-
     setState(() {
       isLoading = true;
     });
 
-    DocumentReference docRef = Firestore.instance.collection('upcomingEvents')
-        .document('images');
+    DocumentReference docRef =
+        Firestore.instance.collection('upcomingEvents').document('images');
     DocumentSnapshot docSnapshot = await docRef.get();
 
     setState(() {
@@ -216,7 +213,8 @@ class _HomePageState extends State<HomePage> {
                 IconCard(
                   iconData: Icons.chat,
                   text: 'News',
-                  function: () => Navigator.pushNamed(context, NewsPage.routeName),
+                  function: () =>
+                      Navigator.pushNamed(context, NewsPage.routeName),
                 ),
                 IconCard(
                   iconData: Icons.group_work,
@@ -288,7 +286,6 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
             ),
-
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(
@@ -299,8 +296,7 @@ class _HomePageState extends State<HomePage> {
                       fontSize: 14,
                       color: greenColor,
                     ),
-                  )
-              ),
+                  )),
             )
           ],
         ),

@@ -5,14 +5,13 @@ import 'package:acmcssdeadline/constants.dart';
 import 'package:acmcssdeadline/pages/sessions/ind_session_page.dart';
 
 class SessionsPage extends StatefulWidget {
-
   static const String routeName = "/sessions-page";
+
   @override
   _SessionsPageState createState() => _SessionsPageState();
 }
 
 class _SessionsPageState extends State<SessionsPage> {
-
   final _fireStore = Firestore.instance;
 
   @override

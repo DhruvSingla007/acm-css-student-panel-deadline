@@ -4,7 +4,6 @@ import 'package:acmcssdeadline/Widgets/sponsors_gridTile.dart';
 import 'package:acmcssdeadline/constants.dart';
 
 class SponsorsPage extends StatefulWidget {
-
   static const String routeName = "/sponsors-page";
 
   @override
@@ -12,7 +11,6 @@ class SponsorsPage extends StatefulWidget {
 }
 
 class _SponsorsPageState extends State<SponsorsPage> {
-
   final _fireStore = Firestore.instance;
 
   @override
@@ -28,14 +26,14 @@ class _SponsorsPageState extends State<SponsorsPage> {
               stream: _fireStore
                   .collection(fireStoreSponsorCollectionLabel)
                   .snapshots(),
-              builder: (context, snapshot){
-                if(snapshot.hasData){
+              builder: (context, snapshot) {
+                if (snapshot.hasData) {
                   final sponsors = snapshot.data.documents;
                   print(sponsors);
                   print(sponsors.length);
 
                   List<Widget> sponsorListTiles = [];
-                  for(var sponsor in sponsors){
+                  for (var sponsor in sponsors) {
                     final sponsorName = sponsor.data[firestoreNameLabel];
                     final sponsorsImageUrl = sponsor.data[firestoreImageUrl];
 
@@ -61,11 +59,13 @@ class _SponsorsPageState extends State<SponsorsPage> {
                   return Center(
                     child: Container(
                       child: Center(
-                        child: Text('An unexpected error has occured.',),),
+                        child: Text(
+                          'An unexpected error has occured.',
+                        ),
+                      ),
                     ),
                   );
-              }
-          ),
+              }),
         ],
       ),
     );
