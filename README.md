@@ -7,12 +7,12 @@
 <br>
 
 ## Table of Contents
-* [About the Project](#about-the-project)
-* [Requirements](#requirements)
-* [Running the Project](#running-the-Project)
-* [Some useful links to learn flutter](#some-useful-links-to-learn-flutter)
-* [Links](#links)
-* [Contributors](#contributors)
+* [About the Project](#-about-the-project)
+* [Requirements](#-requirements)
+* [Running the Project](#-running-the-Project)
+* [Some useful links to learn flutter](#-some-useful-links-to-learn-flutter)
+* [Links](#-links)
+* [Contributors](#-contributors)
 
 <br>
 
@@ -59,7 +59,7 @@ samples, guidance on mobile development, and a full API reference.
 
 #### 📃&nbsp; Doc File:
 
--[Google Doc file for Proposal] (https://docs.google.com/document/d/1OGa8ekoK7Ycjnlv58_eXy75ArHQsuQTZ0FAjoNIKp7w/edit?usp=sharing)
+-[Google Doc] (https://docs.google.com/document/d/1OGa8ekoK7Ycjnlv58_eXy75ArHQsuQTZ0FAjoNIKp7w/edit?usp=sharing)
 
 <br>
 
