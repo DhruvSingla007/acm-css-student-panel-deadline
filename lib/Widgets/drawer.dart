@@ -1,3 +1,4 @@
+import 'package:acmcssdeadline/pages/faq/faq_page.dart';
 import 'package:acmcssdeadline/pages/sessions/sessions_page.dart';
 import 'package:acmcssdeadline/pages/sponsors_page.dart';
 import 'package:acmcssdeadline/pages/team_members/members_page.dart';
@@ -143,6 +144,13 @@ class _HomePageDrawerState extends State<HomePageDrawer> {
             title: 'About',
             icon: Icons.info_outline,
             function: () => Navigator.pushNamed(context, AboutPage.routeName),
+          ),
+          Divider(),
+
+          _buildDrawerListTile(
+            title: "FAQ's",
+            icon: Icons.perm_device_information,
+            function: () => Navigator.pushNamed(context, ChatScreen.routeName),
           ),
           Divider(),
           SizedBox(

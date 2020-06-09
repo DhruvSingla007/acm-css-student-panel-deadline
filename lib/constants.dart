@@ -1,5 +1,23 @@
 import 'package:flutter/material.dart';
 
+const kSendButtonTextStyle = TextStyle(
+  color: greenColor,
+  fontWeight: FontWeight.bold,
+  fontSize: 18.0,
+);
+
+const kMessageTextFieldDecoration = InputDecoration(
+  contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
+  hintText: 'Ask your question...',
+  border: InputBorder.none,
+);
+
+const kMessageContainerDecoration = BoxDecoration(
+  border: Border(
+    top: BorderSide(color: greenColor, width: 2.0),
+  ),
+);
+
 const Color greenColor = Color(0xFF2AC0AF);
 
 const String appbarLabelHomePage = "PEC ACM";
