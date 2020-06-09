@@ -5,6 +5,7 @@ import 'package:acmcssdeadline/constants.dart';
 import 'package:barcode_scan/barcode_scan.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:toast/toast.dart';
+import 'package:get_ip/get_ip.dart';
 
 class IndEventPage extends StatefulWidget {
   static const String routeName = "/ind-event-page";
@@ -21,6 +22,7 @@ class IndEventPage extends StatefulWidget {
 
 class _IndEventPageState extends State<IndEventPage> {
   String studentID = "";
+  String deviceIP = "";
   SharedPreferences sharedPreferences;
 
   bool isLoading = false;
@@ -35,15 +37,16 @@ class _IndEventPageState extends State<IndEventPage> {
         .document(widget.documentSnapshot.data[firestoreNameLabel]);
     DocumentSnapshot docSnapshot = await docRef.get();
     List attendedStudents = docSnapshot.data['studentsAttended'];
+    List deviceAddresses = docSnapshot.data['ip'];
 
-    if (attendedStudents.contains(studentID) == true) {
+    if (attendedStudents.contains(studentID) == true || deviceAddresses.contains(deviceIP) == true) {
       Toast.show("Attendance already marked", context,
           duration: Toast.LENGTH_SHORT, gravity: Toast.BOTTOM);
     } else {
-      //print("+++++++++++++++++++++++++++++++++++++++++");
-      //print(attendedStudents.contains(studentID) == true);
+
       docRef.updateData({
-        'studentsAttended': FieldValue.arrayUnion([studentID])
+        'studentsAttended': FieldValue.arrayUnion([studentID]),
+        'ip': FieldValue.arrayUnion([deviceIP])
       });
 
       Toast.show("Attendance marked successfully", context,
@@ -69,9 +72,11 @@ class _IndEventPageState extends State<IndEventPage> {
   }
 
   Future<void> _getInfo() async {
+    String ipAddress = await GetIp.ipAddress;
     sharedPreferences = await SharedPreferences.getInstance();
     setState(() {
       studentID = sharedPreferences.getString("studentSID");
+      deviceIP = ipAddress;
     });
   }
 
