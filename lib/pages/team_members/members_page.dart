@@ -1,3 +1,4 @@
+import 'package:acmcssdeadline/pages/app_coordinators/app_coordinators_page.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:acmcssdeadline/Widgets/member_listTile.dart';
@@ -17,8 +18,14 @@ class _TeamMembersPageState extends State<TeamMembersPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: new AppBar(
-        title: new Text('Members', style: TextStyle(fontFamily: 'Montserrat')),
+        title: new Text('Members',style: TextStyle(fontFamily: 'Montserrat'),),
         centerTitle: true,
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(Icons.developer_mode),
+            onPressed: () => Navigator.pushNamed(context, AppCoordinatorsPage.routeName),
+          ),
+        ],
       ),
       body: SafeArea(
         child: ListView(
@@ -33,13 +40,13 @@ class _TeamMembersPageState extends State<TeamMembersPage> {
                   List<IndMemberListTile> memberListTiles = [];
                   for (var member in members) {
                     final memberName =
-                        member.data[firestoreTeamMemberNameLabel];
+                    member.data[firestoreTeamMemberNameLabel];
                     final memberContact =
-                        member.data[firestoreTeamMemberContactLabel];
+                    member.data[firestoreTeamMemberContactLabel];
                     final memberEmailID =
-                        member.data[firestoreTeamMemberEmailIDLabel];
+                    member.data[firestoreTeamMemberEmailIDLabel];
                     final memberPosition =
-                        member.data[firestoreTeamMemberPositionLabel];
+                    member.data[firestoreTeamMemberPositionLabel];
                     final memberImageUrl = member.data[firestoreImageUrl];
 
                     final memberListTile = IndMemberListTile(
@@ -61,7 +68,7 @@ class _TeamMembersPageState extends State<TeamMembersPage> {
                     child: Center(
                       child: Text(
                         'Unexpected Error Occurred',
-                          style: TextStyle(fontFamily: 'Montserrat'),
+                        style: TextStyle(fontFamily: 'Montserrat'),
                       ),
                     ),
                   ),

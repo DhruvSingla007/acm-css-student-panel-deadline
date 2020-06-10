@@ -4,13 +4,12 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:acmcssdeadline/constants.dart';
-import 'package:acmcssdeadline/pages/login_page.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import 'login_page.dart';
-
 class MyProfilePage extends StatefulWidget {
+
+  static const String routeName = '/my-profile-page';
   @override
   _MyProfilePageState createState() => _MyProfilePageState();
 }
@@ -43,8 +42,8 @@ class _MyProfilePageState extends State<MyProfilePage> {
     Alert(
       style: AlertStyle(
         backgroundColor: Colors.black,
-        titleStyle: TextStyle(fontFamily: 'Montserrat',color: Colors.white),
-        descStyle: TextStyle(fontFamily: 'Montserrat',color: Colors.white),
+        titleStyle: TextStyle(color: Colors.white, fontFamily: 'Montserrat'),
+        descStyle: TextStyle(color: Colors.white, fontFamily: 'Montserrat'),
       ),
       context: context,
       type: AlertType.warning,
@@ -54,7 +53,7 @@ class _MyProfilePageState extends State<MyProfilePage> {
         DialogButton(
           child: Text(
             "Cancel",
-            style: TextStyle(fontFamily: 'Montserrat',color: Colors.white, fontSize: 20),
+            style: TextStyle(color: Colors.white, fontFamily: 'Montserrat', fontSize: 20),
           ),
           onPressed: () => Navigator.pop(context),
           gradient: LinearGradient(colors: [
@@ -135,23 +134,23 @@ class _MyProfilePageState extends State<MyProfilePage> {
             padding: const EdgeInsets.all(4.0),
             child: proficiency == 'true'
                 ? Text(
-                    'Proficiency',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontFamily: 'Montserrat',
-                      fontSize: 18.0,
-                      fontWeight: FontWeight.w500,
-                    ),
-                  )
+              'Proficiency',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontFamily: 'Montserrat',
+                fontSize: 18.0,
+                fontWeight: FontWeight.w500,
+              ),
+            )
                 : Text(
-                    'Non-Proficiency',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontFamily: 'Montserrat',
-                      fontSize: 18.0,
-                      fontWeight: FontWeight.w500,
-                    ),
-                  ),
+              'Non-Proficiency',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontFamily: 'Montserrat',
+                fontSize: 18.0,
+                fontWeight: FontWeight.w500,
+              ),
+            ),
           ),
         ),
       ),
@@ -180,7 +179,7 @@ class _MyProfilePageState extends State<MyProfilePage> {
     return Scaffold(
       appBar: AppBar(
         elevation: 0.0,
-        title: Text('My Profile', style: TextStyle(fontFamily: 'Montserrat')),
+        title: Text('My Profile',style: TextStyle(fontFamily: 'Montserrat'),),
         centerTitle: true,
         actions: <Widget>[
           IconButton(

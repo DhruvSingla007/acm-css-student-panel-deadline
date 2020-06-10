@@ -1,5 +1,5 @@
 import 'package:acmcssdeadline/constants.dart';
-import 'package:acmcssdeadline/splash_screens/IntroPage.dart';
+import 'package:acmcssdeadline/onboarding_pages/onboarding_screen.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -44,7 +44,7 @@ class _SplashScreenState extends State<SplashScreen> {
     new Future.delayed(Duration(milliseconds: 5000)).then((val) {
       Navigator.pushReplacementNamed(
         context,
-        IntroPage.routeName,
+        OnboardingScreen.routeName,
       );
     });
   }

@@ -149,12 +149,11 @@ class _TabScreenState extends State<TabScreen> {
                   thickness: 3.0,
                 ),
                 ListTile(
-                  title: Text(
-                    "Custom",
-                    style: TextStyle(
-                      //    color: Color(0xff5cb3bc),
-                      fontFamily: 'Montserrat',)
-                  ),
+                  title: Text("Custom",
+                      style: TextStyle(
+                        //    color: Color(0xff5cb3bc),
+                        fontFamily: 'Montserrat',
+                      )),
                   leading: Icon(
                     Feather.activity,
                     //color: Colors.black
@@ -257,7 +256,8 @@ class _TabScreenState extends State<TabScreen> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text(_pages[_selectedPageIndex]['appBarTitle'], style: TextStyle(fontFamily: 'Montserrat')),
+        title: Text(_pages[_selectedPageIndex]['appBarTitle'],
+            style: TextStyle(fontFamily: 'Montserrat')),
         actions: <Widget>[
           IconButton(
             icon: Icon(Feather.settings),
@@ -276,11 +276,18 @@ class _TabScreenState extends State<TabScreen> {
         type: BottomNavigationBarType.shifting,
         items: [
           BottomNavigationBarItem(
-              icon: Icon(Icons.near_me), title: Text('Feed', style: TextStyle(fontFamily: 'Montserrat'))),
+              icon: Icon(Icons.near_me),
+              title: Text('Feed', style: TextStyle(fontFamily: 'Montserrat'))),
           BottomNavigationBarItem(
-              icon: Icon(Icons.event), title: Text('Events', style: TextStyle(fontFamily: 'Montserrat'),)),
+              icon: Icon(Icons.event),
+              title: Text(
+                'Events',
+                style: TextStyle(fontFamily: 'Montserrat'),
+              )),
           BottomNavigationBarItem(
-              icon: Icon(Icons.work), title: Text('Workshops', style: TextStyle(fontFamily: 'Montserrat'))),
+              icon: Icon(Icons.work),
+              title: Text('Workshops',
+                  style: TextStyle(fontFamily: 'Montserrat'))),
         ],
       ),
       body: _pages[_selectedPageIndex]['page'],

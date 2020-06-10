@@ -1,14 +1,15 @@
 import 'package:acmcssdeadline/Widgets/theme.dart';
+import 'package:acmcssdeadline/onboarding_pages/onboarding_screen.dart';
 import 'package:acmcssdeadline/pages/about_page.dart';
 import 'package:acmcssdeadline/pages/app_coordinators/app_coordinators_page.dart';
 import 'package:acmcssdeadline/pages/events_page.dart';
 import 'package:acmcssdeadline/pages/login_page.dart';
+import 'package:acmcssdeadline/pages/my_profile_page.dart';
 import 'package:acmcssdeadline/pages/news/news_page.dart';
 import 'package:acmcssdeadline/pages/sessions/sessions_page.dart';
 import 'package:acmcssdeadline/pages/sponsors_page.dart';
 import 'package:acmcssdeadline/pages/team_members/members_page.dart';
 import 'package:acmcssdeadline/pages/workshops/workshops_page.dart';
-import 'package:acmcssdeadline/splash_screens/IntroPage.dart';
 import 'package:acmcssdeadline/splash_screens/SplashScreen.dart';
 import 'package:acmcssdeadline/tab_Screens/tabs_screen.dart';
 import 'package:flutter/material.dart';
@@ -16,6 +17,8 @@ import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 
 import 'constants.dart';
+import 'faq/faq_page.dart';
+import 'mentor/become_mentor.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -26,7 +29,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider<ThemeChanger>(
-      builder: (_) => ThemeChanger(ThemeData(primaryColor: LightTheme)),
+     builder: (_) => ThemeChanger(ThemeData(primaryColor: LightTheme)),
       child: new MaterialAppWithTheme(),
     );
   }
@@ -47,7 +50,7 @@ class MaterialAppWithTheme extends StatelessWidget {
       home: SplashScreen(),
       debugShowCheckedModeBanner: false,
       routes: {
-        IntroPage.routeName: (context) => IntroPage(),
+        OnboardingScreen.routeName: (context) => OnboardingScreen(),
         LoginPage.routeName: (context) => LoginPage(),
         TabScreen.routeName: (context) => TabScreen(),
         EventsPage.routeName: (context) => EventsPage(),
@@ -58,6 +61,9 @@ class MaterialAppWithTheme extends StatelessWidget {
         TeamMembersPage.routeName: (context) => TeamMembersPage(),
         NewsPage.routeName: (context) => NewsPage(),
         AppCoordinatorsPage.routeName: (context) => AppCoordinatorsPage(),
+        ChatScreen.routeName: (context) => ChatScreen(),
+        BecomeMentor.routeName: (context) => BecomeMentor(),
+        MyProfilePage.routeName: (context) => MyProfilePage(),
       },
     );
   }
