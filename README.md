@@ -55,12 +55,9 @@ samples, guidance on mobile development, and a full API reference.
 
 <br>
 
+### 📃&nbsp; Document:
 
-### 📩&nbsp; Links:
-
-#### 📃&nbsp; Doc File:
-
--[Google Doc] (https://docs.google.com/document/d/1OGa8ekoK7Ycjnlv58_eXy75ArHQsuQTZ0FAjoNIKp7w/edit?usp=sharing)
+-```Link for the documentation of project```(https://docs.google.com/document/d/1OGa8ekoK7Ycjnlv58_eXy75ArHQsuQTZ0FAjoNIKp7w/edit?usp=sharing)
 
 <br>
 
