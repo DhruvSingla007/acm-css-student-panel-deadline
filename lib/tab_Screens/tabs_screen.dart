@@ -5,8 +5,10 @@ import 'package:acmcssdeadline/pages/events_page.dart';
 import 'package:acmcssdeadline/pages/news/news_page.dart';
 import 'package:acmcssdeadline/pages/workshops/workshops_page.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:flutter_share/flutter_share.dart';
+import 'package:rflutter_alert/rflutter_alert.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class TabScreen extends StatefulWidget {
@@ -69,6 +71,46 @@ class _TabScreenState extends State<TabScreen> {
         linkUrl: 'https://play.google.com/store',
         chooserTitle: 'ACM PEC Chooser Title');
   }
+
+  Future<bool> _onWillPop() {
+    Alert(
+      style: AlertStyle(
+        backgroundColor: LightTheme,
+        titleStyle: TextStyle(fontFamily: 'Montserrat', color: Colors.black),
+        descStyle: TextStyle(fontFamily: 'Montserrat', color: Colors.black),
+      ),
+      context: context,
+      type: AlertType.error,
+      title: "Exit",
+      desc: "Do you want to exit the app ?",
+      buttons: [
+        DialogButton(
+          child: Text(
+            "No",
+            style: TextStyle(
+                fontFamily: 'Montserrat', color: Colors.white, fontSize: 20),
+          ),
+          onPressed: () => Navigator.of(context).pop(false),
+          gradient: LinearGradient(colors: [
+            Color(0xFF20BF55),
+            Color(0xFF01BAEF),
+          ]),
+        ),
+        DialogButton(
+          child: Text(
+            "Yes",
+            style: TextStyle(
+                fontFamily: 'Montserrat', color: Colors.white, fontSize: 20),
+          ),
+          onPressed: () => SystemNavigator.pop(),
+          gradient: LinearGradient(colors: [
+            Color.fromRGBO(116, 116, 191, 1.0),
+            Color.fromRGBO(52, 138, 199, 1.0)
+          ]),
+        )
+      ],
+    ).show();
+  }
   Future<bool> _onSettingsButtonsPressed(BuildContext context) {
     return showDialog(
         context: context,
@@ -76,7 +118,7 @@ class _TabScreenState extends State<TabScreen> {
         builder: (BuildContext context) {
           return new AlertDialog(
             title: Text(
-              'Have a chat with us',
+              'Connect with us',
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontFamily: 'Montserrat',
@@ -169,44 +211,47 @@ class _TabScreenState extends State<TabScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        title: Text(_pages[_selectedPageIndex]['appBarTitle'],
-            style: TextStyle(fontFamily: 'Montserrat')),
-        actions: <Widget>[
-          IconButton(
-            icon: Icon(Feather.settings),
-            onPressed: () => _onSettingsButtonsPressed(context),
-            tooltip: "Log Out",
-          ),
-        ],
+    return WillPopScope(
+      onWillPop: _onWillPop,
+      child: Scaffold(
+        appBar: AppBar(
+          centerTitle: true,
+          title: Text(_pages[_selectedPageIndex]['appBarTitle'],
+              style: TextStyle(fontFamily: 'Montserrat')),
+          actions: <Widget>[
+            IconButton(
+              icon: Icon(Feather.settings),
+              onPressed: () => _onSettingsButtonsPressed(context),
+              tooltip: "Log Out",
+            ),
+          ],
+        ),
+        drawer: HomePageDrawer(),
+        bottomNavigationBar: BottomNavigationBar(
+          //backgroundColor: LightTheme,
+          onTap: _selectPage,
+          unselectedItemColor: LightTheme,
+          selectedItemColor: greenColor,
+          currentIndex: _selectedPageIndex,
+          type: BottomNavigationBarType.shifting,
+          items: [
+            BottomNavigationBarItem(
+                icon: Icon(Icons.near_me),
+                title: Text('Feed', style: TextStyle(fontFamily: 'Montserrat'))),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.event),
+                title: Text(
+                  'Events',
+                  style: TextStyle(fontFamily: 'Montserrat'),
+                )),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.work),
+                title: Text('Workshops',
+                    style: TextStyle(fontFamily: 'Montserrat'))),
+          ],
+        ),
+        body: _pages[_selectedPageIndex]['page'],
       ),
-      drawer: HomePageDrawer(),
-      bottomNavigationBar: BottomNavigationBar(
-        //backgroundColor: LightTheme,
-        onTap: _selectPage,
-        unselectedItemColor: LightTheme,
-        selectedItemColor: greenColor,
-        currentIndex: _selectedPageIndex,
-        type: BottomNavigationBarType.shifting,
-        items: [
-          BottomNavigationBarItem(
-              icon: Icon(Icons.near_me),
-              title: Text('Feed', style: TextStyle(fontFamily: 'Montserrat'))),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.event),
-              title: Text(
-                'Events',
-                style: TextStyle(fontFamily: 'Montserrat'),
-              )),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.work),
-              title: Text('Workshops',
-                  style: TextStyle(fontFamily: 'Montserrat'))),
-        ],
-      ),
-      body: _pages[_selectedPageIndex]['page'],
     );
   }
 }

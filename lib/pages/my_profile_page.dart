@@ -1,10 +1,9 @@
-import 'dart:io';
-
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:acmcssdeadline/constants.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
+import 'package:acmcssdeadline/pages/login_page.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class MyProfilePage extends StatefulWidget {
@@ -69,7 +68,8 @@ class _MyProfilePageState extends State<MyProfilePage> {
           onPressed: () {
             handleSignOut().then((val) {
               preferences.clear().then((val) {
-                exit(0);
+                Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context)=>LoginPage()), (e) => false);
+                //Navigator.pushNamed(context, LoginPage.routeName);
               });
             });
           },
