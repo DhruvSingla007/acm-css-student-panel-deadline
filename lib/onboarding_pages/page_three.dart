@@ -71,7 +71,7 @@ class PageThree extends StatelessWidget {
                   padding: EdgeInsets.only(
                       left: SizeConfig.blockSizeHorizontal * 14),
                   child: Image.asset(
-                    'assets/images/pyhton.png',
+                    'assets/images/python.png',
                     fit: BoxFit.contain,
                     width: 75,
                     height: 75,

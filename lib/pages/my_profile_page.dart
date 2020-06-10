@@ -86,6 +86,7 @@ class _MyProfilePageState extends State<MyProfilePage> {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Card(
+        color: LightTheme,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(30.0),
         ),
@@ -96,6 +97,7 @@ class _MyProfilePageState extends State<MyProfilePage> {
               text,
               textAlign: TextAlign.center,
               style: TextStyle(
+                color: Colors.black,
                 fontFamily: 'Montserrat',
                 fontSize: 18.0,
                 fontWeight: FontWeight.w500,
@@ -126,6 +128,7 @@ class _MyProfilePageState extends State<MyProfilePage> {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Card(
+        color: LightTheme,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(30.0),
         ),
@@ -138,6 +141,7 @@ class _MyProfilePageState extends State<MyProfilePage> {
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontFamily: 'Montserrat',
+                color: Colors.black,
                 fontSize: 18.0,
                 fontWeight: FontWeight.w500,
               ),

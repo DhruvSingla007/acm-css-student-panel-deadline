@@ -8,6 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:acmcssdeadline/constants.dart';
 import 'package:acmcssdeadline/pages/about_page.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:acmcssdeadline/pages/my_profile_page.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class HomePageDrawer extends StatefulWidget {
@@ -80,6 +81,33 @@ class _HomePageDrawerState extends State<HomePageDrawer> {
     }
   }
 
+  void showDialogPopUp(String msg, BuildContext context) {
+    showDialog(
+        context: context,
+        builder: (context) {
+          return Dialog(
+            insetAnimationCurve: Curves.easeInCubic,
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(20.0)),
+            child: Container(
+                height: 100,
+                decoration: BoxDecoration(
+                    gradient:
+                    LinearGradient(colors: [Colors.black, LightTheme]),
+                    borderRadius: BorderRadius.circular(20)
+                ),
+                child: Center(
+                    child: Text(
+                      msg,
+                      style: TextStyle(
+                          fontSize: 22,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white),
+                    ))),
+          );
+        });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -97,12 +125,12 @@ class _HomePageDrawerState extends State<HomePageDrawer> {
             accountEmail: Text(emailId, style: TextStyle(fontFamily: 'Montserrat'),),
             accountName: Text(studentName, style: TextStyle(fontFamily: 'Montserrat'),),
           ),
-//          _buildDrawerListTile(
-//            title: 'My Profile',
-//            icon: Icons.person_outline,
-//            function: () => Navigator.push(context,
-//                MaterialPageRoute(builder: (context) => MyProfilePage())),
-//          ),
+          _buildDrawerListTile(
+            title: 'My Profile',
+            icon: Icons.person_outline,
+            function: () => Navigator.push(context,
+                MaterialPageRoute(builder: (context) => MyProfilePage())),
+          ),
           /*        Divider(),
           _buildDrawerListTile(
             title: 'Past Events',
@@ -123,7 +151,8 @@ class _HomePageDrawerState extends State<HomePageDrawer> {
           _buildDrawerListTile(
             title: "Mentor hunt",
             icon: Icons.perm_device_information,
-            function: () => Navigator.pushNamed(context, BecomeMentor.routeName),
+            function: () => showDialogPopUp('Coming Soon!',context)
+            //function: () => Navigator.pushNamed(context, BecomeMentor.routeName),
           ),
 
           Divider(),
@@ -156,12 +185,12 @@ class _HomePageDrawerState extends State<HomePageDrawer> {
             function: () => Navigator.pushNamed(context, ChatScreen.routeName),
           ),
 
-          Divider(),
-          _buildDrawerListTile(
-            title: 'About',
-            icon: Icons.info_outline,
-            function: () => Navigator.pushNamed(context, AboutPage.routeName),
-          ),
+//          Divider(),
+//          _buildDrawerListTile(
+//            title: 'About',
+//            icon: Icons.info_outline,
+//            function: () => Navigator.pushNamed(context, AboutPage.routeName),
+//          ),
           Divider(),
           SizedBox(
             height: 40.0,

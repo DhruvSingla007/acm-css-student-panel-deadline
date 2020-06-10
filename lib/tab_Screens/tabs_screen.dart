@@ -1,5 +1,5 @@
 import 'package:acmcssdeadline/Widgets/drawer.dart';
-import 'package:acmcssdeadline/Widgets/theme.dart';
+import 'package:acmcssdeadline/pages/about_page.dart';
 import 'package:acmcssdeadline/constants.dart';
 import 'package:acmcssdeadline/pages/events_page.dart';
 import 'package:acmcssdeadline/pages/news/news_page.dart';
@@ -7,10 +7,7 @@ import 'package:acmcssdeadline/pages/workshops/workshops_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:flutter_share/flutter_share.dart';
-import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
-
-enum SingingCharacter { light, dark, fault }
 
 class TabScreen extends StatefulWidget {
   static const String routeName = "/tab-screen";
@@ -72,109 +69,28 @@ class _TabScreenState extends State<TabScreen> {
         linkUrl: 'https://play.google.com/store',
         chooserTitle: 'ACM PEC Chooser Title');
   }
-
-  SingingCharacter _character = SingingCharacter.light;
-
   Future<bool> _onSettingsButtonsPressed(BuildContext context) {
-    ThemeChanger _themeChanger = Provider.of<ThemeChanger>(context);
     return showDialog(
         context: context,
         barrierDismissible: false,
         builder: (BuildContext context) {
           return new AlertDialog(
             title: Text(
-              'Change the theme',
+              'Have a chat with us',
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontFamily: 'Montserrat',
               ),
             ),
-            content: Container(
-              height: 220,
-              child: Column(children: [
-                ListTile(
-                  title: Text(
-                    "Dark",
-                    style: TextStyle(
-                      fontFamily: 'Montserrat',
-                      //color: Color(0xff5cb3bc)
-                    ),
-                  ),
-                  leading: Icon(
-                    Feather.moon,
-                    //    color: Colors.black
-                  ),
-                  trailing: Radio(
-                    value: SingingCharacter.dark,
-                    groupValue: _character,
-                    activeColor: CustomTheme,
-                    onChanged: (SingingCharacter value) {
-                      setState(() {
-                        _character = value;
-                        _themeChanger.setTheme(ThemeData.dark());
-                      });
-                    },
-                  ),
+            content: GestureDetector(
+              onTap: () => Navigator.pushNamed(context, AboutPage.routeName),
+              child: Material(
+                borderRadius: BorderRadius.circular(20.0),
+                child: ListTile(
+                  leading: Icon(Icons.info_outline),
+                  title: Text('About Us', style: TextStyle(fontFamily: 'Montserrat'),),
                 ),
-                Divider(
-                  thickness: 3.0,
-                ),
-                ListTile(
-                  title: Text(
-                    "Light",
-                    style: TextStyle(
-                      fontFamily: 'Montserrat',
-                      //color: Color(0xff5cb3bc)
-                    ),
-                  ),
-                  leading: Icon(
-                    Feather.sun,
-                    //    color: Colors.black
-                  ),
-                  trailing: Radio(
-                    //hoverColor: Color(0xffCBE7EA),
-                    value: SingingCharacter.light,
-                    groupValue: _character,
-                    activeColor: CustomTheme,
-                    onChanged: (SingingCharacter value) {
-                      setState(() {
-                        _character = value;
-                        _themeChanger
-                            .setTheme(ThemeData(primaryColor: LightTheme));
-                      });
-                    },
-                  ),
-                ),
-                Divider(
-                  thickness: 3.0,
-                ),
-                ListTile(
-                  title: Text("Custom",
-                      style: TextStyle(
-                        //    color: Color(0xff5cb3bc),
-                        fontFamily: 'Montserrat',
-                      )),
-                  leading: Icon(
-                    Feather.activity,
-                    //color: Colors.black
-                  ),
-                  trailing: Radio(
-                    value: SingingCharacter.fault,
-                    groupValue: _character,
-                    activeColor: CustomTheme,
-                    onChanged: (SingingCharacter value) {
-                      setState(() {
-                        _character = value;
-                        _themeChanger
-                            .setTheme(ThemeData(primaryColor: CustomTheme));
-                      });
-                    },
-                  ),
-                ),
-                Divider(
-                  thickness: 3.0,
-                )
-              ]),
+              ),
             ),
             actions: <Widget>[
               Padding(

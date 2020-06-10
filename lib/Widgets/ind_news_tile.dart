@@ -61,6 +61,7 @@ class NewsListTile extends StatelessWidget {
                         textAlign: TextAlign.justify,
                         style: TextStyle(
                           fontFamily: 'Montserrat',
+                          color: Colors.black,
                           fontWeight: FontWeight.bold,
                           fontSize: 18.0,
                         ),
@@ -72,7 +73,9 @@ class NewsListTile extends StatelessWidget {
               ),
               Padding(
                 padding: const EdgeInsets.all(1.0),
-                child: Divider(),
+                child: Divider(
+                  color: Colors.blueGrey,
+                ),
               ),
               Padding(
                 padding: const EdgeInsets.only(
@@ -85,7 +88,7 @@ class NewsListTile extends StatelessWidget {
                   child: Text(
                     newsDescription,
                     textAlign: TextAlign.justify,
-                      style: TextStyle(fontFamily: 'Montserrat')
+                      style: TextStyle(fontFamily: 'Montserrat',color: Colors.black)
                   ),
                 ),
               ),
