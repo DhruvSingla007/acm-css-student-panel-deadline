@@ -11,7 +11,7 @@
 * [Requirements](#-requirements)
 * [Running the Project](#-running-the-Project)
 * [Some useful links to learn flutter](#-some-useful-links-to-learn-flutter)
-* [Links](#-links)
+* [Document](#-document)
 * [ScreenShots](#-screenshots)
 * [Contributors](#-contributors)
 
@@ -57,7 +57,7 @@ samples, guidance on mobile development, and a full API reference.
 
 ### 📃&nbsp; Document:
 
--```Link for the documentation of project```(https://docs.google.com/document/d/1OGa8ekoK7Ycjnlv58_eXy75ArHQsuQTZ0FAjoNIKp7w/edit?usp=sharing)
+=> (https://docs.google.com/document/d/1OGa8ekoK7Ycjnlv58_eXy75ArHQsuQTZ0FAjoNIKp7w/edit?usp=sharing)
 
 <br>
 
