@@ -3,6 +3,8 @@ import 'package:acmcssdeadline/pages/app_coordinators/app_coordinators_page.dart
 import 'package:acmcssdeadline/pages/events_page.dart';
 import 'package:acmcssdeadline/pages/faq/faq_page.dart';
 import 'package:acmcssdeadline/pages/login_page.dart';
+import 'package:acmcssdeadline/pages/mentor/become_mentor_page.dart';
+import 'package:acmcssdeadline/pages/my_profile_page.dart';
 import 'package:acmcssdeadline/pages/news/news_page.dart';
 import 'package:acmcssdeadline/pages/sessions/sessions_page.dart';
 import 'package:acmcssdeadline/pages/sponsors_page.dart';
@@ -35,6 +37,8 @@ class MyApp extends StatelessWidget {
         NewsPage.routeName: (context) => NewsPage(),
         AppCoordinatorsPage.routeName: (context) => AppCoordinatorsPage(),
         ChatScreen.routeName: (context) => ChatScreen(),
+        BecomeMentor.routeName: (context) => BecomeMentor(),
+        MyProfilePage.routeName: (context) => MyProfilePage(),
       },
     );
   }

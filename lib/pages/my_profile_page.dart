@@ -11,6 +11,8 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'login_page.dart';
 
 class MyProfilePage extends StatefulWidget {
+
+  static const String routeName = '/my-profile-page';
   @override
   _MyProfilePageState createState() => _MyProfilePageState();
 }

@@ -1,6 +1,7 @@
 import 'package:acmcssdeadline/Widgets/drawer.dart';
 import 'package:acmcssdeadline/constants.dart';
 import 'package:acmcssdeadline/pages/events_page.dart';
+import 'package:acmcssdeadline/pages/my_profile_page.dart';
 import 'package:acmcssdeadline/pages/news/news_page.dart';
 import 'package:acmcssdeadline/pages/workshops/workshops_page.dart';
 import 'package:flutter/material.dart';
@@ -42,6 +43,14 @@ class _TabScreenState extends State<TabScreen> {
       appBar: AppBar(
         centerTitle: true,
         title: Text(_pages[_selectedPageIndex]['appBarTitle']),
+        actions: <Widget>[
+          IconButton(
+            onPressed: (){
+              Navigator.pushNamed(context, MyProfilePage.routeName);
+            },
+            icon: Icon(Icons.person),
+          ),
+        ],
       ),
       drawer: HomePageDrawer(),
       bottomNavigationBar: BottomNavigationBar(

@@ -1,3 +1,4 @@
+import 'package:acmcssdeadline/pages/app_coordinators/app_coordinators_page.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:acmcssdeadline/Widgets/member_listTile.dart';
@@ -19,6 +20,12 @@ class _TeamMembersPageState extends State<TeamMembersPage> {
       appBar: new AppBar(
         title: new Text('Members'),
         centerTitle: true,
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(Icons.developer_mode),
+            onPressed: () => Navigator.pushNamed(context, AppCoordinatorsPage.routeName),
+          ),
+        ],
       ),
       body: SafeArea(
         child: ListView(

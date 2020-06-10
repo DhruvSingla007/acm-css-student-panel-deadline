@@ -1,3 +1,4 @@
+import 'package:acmcssdeadline/Widgets/textFormFields.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:connectivity/connectivity.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -32,31 +33,6 @@ Widget mainLogoLoginPage(String imagePath) {
   );
 }
 
-Widget formFields(
-    {String errorMessage,
-    String hintText,
-    Icon preIcon,
-    TextEditingController editingController}) {
-  return Padding(
-    padding: const EdgeInsets.all(8.0),
-    child: TextFormField(
-      validator: (value) {
-        if (value.isEmpty) {
-          return errorMessage;
-        }
-        return null;
-      },
-      controller: editingController,
-      decoration: InputDecoration(
-        prefixIcon: preIcon,
-        hintText: hintText,
-        border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(30.0),
-        ),
-      ),
-    ),
-  );
-}
 
 class _LoginPageState extends State<LoginPage> {
   // text Editing Controllers
@@ -71,11 +47,11 @@ class _LoginPageState extends State<LoginPage> {
 
   bool isConnected = false;
 
-  // Student Info
-  String studentName = "";
-  String studentSID = "";
-  String studentContact = "";
-  String CollegeName = "";
+//  // Student Info
+//  String studentName = "";
+//  String studentSID = "";
+//  String studentContact = "";
+//  String CollegeName = "";
 
   // Form Key of Login Page
   final _studentLoginFormKey = GlobalKey<FormState>();
@@ -253,25 +229,25 @@ class _LoginPageState extends State<LoginPage> {
             key: _studentLoginFormKey,
             child: Column(
               children: <Widget>[
-                formFields(
+                BuildTextFormFields(
                   editingController: _nameInputController,
                   errorMessage: 'Please enter your name',
                   hintText: 'Username',
                   preIcon: Icon(Icons.person),
                 ),
-                formFields(
+                BuildTextFormFields(
                   editingController: _contactInputController,
                   errorMessage: 'Please enter your contact number',
                   hintText: 'Contact Number',
                   preIcon: Icon(Icons.phone_android),
                 ),
-                formFields(
+                BuildTextFormFields(
                   editingController: _collegeNameInputController,
                   errorMessage: 'Please enter your College name',
                   hintText: 'College Name',
                   preIcon: Icon(Icons.school),
                 ),
-                formFields(
+                BuildTextFormFields(
                   editingController: _SIDInputController,
                   errorMessage: 'Please enter your SID/College ID',
                   hintText: 'SID/College ID',
