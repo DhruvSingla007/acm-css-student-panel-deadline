@@ -96,7 +96,8 @@ class PageThree extends StatelessWidget {
                       left: SizeConfig.blockSizeHorizontal * 14,
                       right: SizeConfig.blockSizeHorizontal * 14),
                   child: Text(
-                    "Life need not be easy, provided only that it is not empty.",
+                    "Python was first released in 1989.\n"
+                        "Python was designed by Guido van Rossum.",
                     style: TextStyle(
                       letterSpacing: 0.4,
                       fontSize: SizeConfig.blockSizeHorizontal * 4.2,

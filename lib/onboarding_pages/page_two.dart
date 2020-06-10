@@ -30,7 +30,7 @@ class PageTwo extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
                       Text(
-                        'Java Developers',
+                        'Java',
                         style: TextStyle(
                             fontFamily: 'Header',
                             fontSize: SizeConfig.blockSizeHorizontal * 5.2,
@@ -114,8 +114,8 @@ class PageTwo extends StatelessWidget {
                       left: SizeConfig.blockSizeHorizontal * 14,
                       right: SizeConfig.blockSizeHorizontal * 14),
                   child: Text(
-                    "Non-profit association engaged in\n"
-                        "electric power engineering.",
+                    "Java was first released in 1995.\n"
+                        "Java was designed by Sun Microsystems.",
                     style: TextStyle(
                       letterSpacing: 0.4,
                       fontSize: SizeConfig.blockSizeHorizontal * 4.2,

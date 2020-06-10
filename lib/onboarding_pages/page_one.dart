@@ -117,7 +117,8 @@ class PageOne extends StatelessWidget {
                       left: SizeConfig.blockSizeHorizontal * 14,
                       right: SizeConfig.blockSizeHorizontal * 14),
                   child: Text(
-                    "The best performance improvement is the transition from the nonworking state to the working state.",
+                    "C++ was first released in 1998.\n"
+                        "C++ was designed by Bjarne Stroustrup.",
                     style: TextStyle(
                       letterSpacing: 0.4,
                       fontSize: SizeConfig.blockSizeHorizontal * 4.2,
