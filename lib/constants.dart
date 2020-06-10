@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+const Color LightTheme = Color(0xffCBE7EA);
+const Color CustomTheme = Color(0xff5cb3bc);
 const Color greenColor = Color(0xFF2AC0AF);
 
 const String appbarLabelHomePage = "PEC ACM";

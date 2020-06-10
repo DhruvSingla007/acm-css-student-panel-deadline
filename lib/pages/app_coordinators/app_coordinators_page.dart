@@ -18,7 +18,7 @@ class _AppCoordinatorsPageState extends State<AppCoordinatorsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: new AppBar(
-        title: new Text('Development Team'),
+        title: new Text('Development Team', style: TextStyle(fontFamily: 'Montserrat')),
         centerTitle: true,
       ),
       body: SafeArea(
@@ -62,6 +62,7 @@ class _AppCoordinatorsPageState extends State<AppCoordinatorsPage> {
                     child: Center(
                       child: Text(
                         'Unexpected Error Occurred',
+                           style: TextStyle(fontFamily: 'Montserrat')
                       ),
                     ),
                   ),

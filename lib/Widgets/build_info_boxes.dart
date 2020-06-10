@@ -9,7 +9,7 @@ Widget buildInfoBoxes({Icon icon, String value}) {
     ),
     child: Container(
       decoration: BoxDecoration(
-        color: Colors.black54,
+        color: LightTheme,
         border: Border.all(
           color: greenColor,
         ),
@@ -22,6 +22,8 @@ Widget buildInfoBoxes({Icon icon, String value}) {
           title: Text(
             value,
             style: TextStyle(
+              color: Colors.black,
+              fontFamily: 'Montserrat',
               fontSize: 15.0,
             ),
           ),

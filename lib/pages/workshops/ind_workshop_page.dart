@@ -87,7 +87,7 @@ class _IndWorkshopPageState extends State<IndWorkshopPage> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text('Workshops'),
+        title: Text('Workshops', style: TextStyle(fontFamily: 'Montserrat')),
       ),
       body: infoListView(
         imageUrl: widget.documentSnapshot.data[firestoreImageUrl],

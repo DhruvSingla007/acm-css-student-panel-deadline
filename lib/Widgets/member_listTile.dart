@@ -41,6 +41,7 @@ class IndMemberListTile extends StatelessWidget {
                         child: Center(
                           child: Text(
                             'Loading...',
+                               style: TextStyle(fontFamily: 'Montserrat')
                           ),
                         ),
                       ),
@@ -71,6 +72,7 @@ class IndMemberListTile extends StatelessWidget {
                         child: Text(
                           memberName,
                           style: TextStyle(
+                            fontFamily: 'Montserrat',
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
                             fontSize: 16.67,
@@ -99,6 +101,7 @@ class IndMemberListTile extends StatelessWidget {
                             child: Text(
                               memberPosition,
                               style: TextStyle(
+                                fontFamily: 'Montserrat',
                                 color: Colors.white,
                               ),
                             ),
@@ -122,6 +125,7 @@ class IndMemberListTile extends StatelessWidget {
                             child: Text(
                               memberContact,
                               style: TextStyle(
+                                fontFamily: 'Montserrat',
                                 color: Colors.white,
                               ),
                             ),
@@ -145,6 +149,7 @@ class IndMemberListTile extends StatelessWidget {
                             child: Text(
                               memberEmailID,
                               style: TextStyle(
+                                fontFamily: 'Montserrat',
                                 color: Colors.white,
                               ),
                             ),

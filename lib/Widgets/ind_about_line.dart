@@ -11,7 +11,8 @@ Widget aboutLine() {
         'About',
         textAlign: TextAlign.center,
         style: TextStyle(
-          color: greenColor,
+          fontFamily: 'Montserrat',
+          color: CustomTheme,
           fontWeight: FontWeight.bold,
           fontSize: 18.0,
         ),

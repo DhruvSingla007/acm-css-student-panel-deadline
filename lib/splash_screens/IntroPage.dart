@@ -1,8 +1,10 @@
+import 'package:acmcssdeadline/otp_verify/app.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
-import 'package:acmcssdeadline/pages/login_page.dart';
 
 class IntroPage extends StatefulWidget {
+  static const String routeName = "/intro-page";
+
   @override
   _IntroPageState createState() => _IntroPageState();
 }
@@ -50,11 +52,11 @@ class _IntroPageState extends State<IntroPage> {
           Align(
             alignment: Alignment.bottomLeft,
             child: FlatButton(
-              child: Text("Skip"),
+              child: Text("Skip", style: TextStyle(fontFamily: 'Montserrat'),),
               onPressed: () {
                 Navigator.pushReplacement(
                   context,
-                  MaterialPageRoute(builder: (context) => LoginPage()),
+                  MaterialPageRoute(builder: (context) => App()),
                 );
               },
             ),
@@ -70,7 +72,7 @@ class _IntroPageState extends State<IntroPage> {
                 else
                   Navigator.pushReplacement(
                     context,
-                    MaterialPageRoute(builder: (context) => LoginPage()),
+                    MaterialPageRoute(builder: (context) => App()),
                   );
               },
             ),
@@ -104,6 +106,7 @@ class IntroItem extends StatelessWidget {
               Text(
                 title,
                 style: TextStyle(
+                    fontFamily: 'Montserrat',
                     fontWeight: FontWeight.bold,
                     fontSize: 35.0,
                     color: Colors.white),

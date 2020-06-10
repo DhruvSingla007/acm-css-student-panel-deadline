@@ -15,7 +15,7 @@ Widget imageWidget({@required BuildContext context, @required String url}) {
             width: 100.0,
             height: 50.0,
             child: Center(
-              child: Text('Loading...'),
+              child: Text('Loading...', style: TextStyle(fontFamily: 'Montserrat')),
             ),
           ),
         ),

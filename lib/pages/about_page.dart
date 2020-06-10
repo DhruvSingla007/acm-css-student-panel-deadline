@@ -20,7 +20,7 @@ class _AboutPageState extends State<AboutPage> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text('About'),
+        title: Text('About', style: TextStyle(fontFamily: 'Montserrat')),
       ),
       body: ListView(
         padding: EdgeInsets.all(8.0),

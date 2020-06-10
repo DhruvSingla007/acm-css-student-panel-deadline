@@ -6,6 +6,7 @@ Widget indNameLabel({@required String name}) {
     child: Text(
       name,
       style: TextStyle(
+        fontFamily: 'Montserrat',
         fontWeight: FontWeight.w700,
         fontSize: 25.0,
       ),

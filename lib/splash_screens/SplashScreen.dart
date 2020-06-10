@@ -1,64 +1,69 @@
-import 'dart:async';
-
+import 'package:acmcssdeadline/constants.dart';
 import 'package:acmcssdeadline/splash_screens/IntroPage.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class AnimatedSplashScreen extends StatefulWidget {
+class SplashScreen extends StatefulWidget {
+  static const String routeName = "/splash-screen-page";
+
   @override
-  SplashScreenState createState() => new SplashScreenState();
+  _SplashScreenState createState() => _SplashScreenState();
 }
 
-class SplashScreenState extends State<AnimatedSplashScreen>
-    with SingleTickerProviderStateMixin {
-  var _visible = true;
+Widget mainLogo(String mainLogoPath) {
+  return Hero(
+    tag: 'logo',
+    child: Padding(
+      padding: const EdgeInsets.all(15.0),
+      child: Image.asset(
+        mainLogoPath,
+        height: 250.0,
+        width: 250.0,
+        fit: BoxFit.contain,
+      ),
+    ),
+  );
+}
 
-  AnimationController animationController;
-  Animation<double> animation;
+Widget subLogos(String subLogosPath) {
+  return Expanded(
+    child: Padding(
+      padding: const EdgeInsets.all(15.0),
+      child: Image.asset(
+        subLogosPath,
+        fit: BoxFit.contain,
+      ),
+    ),
+  );
+}
 
-  startTime() async {
-    var _duration = new Duration(seconds: 3);
-    return new Timer(_duration, navigationPage);
-  }
-
-  void navigationPage() {
-    Navigator.pushReplacement(
-      context,
-      MaterialPageRoute(builder: (context) => IntroPage()),
-    );
-  }
-
+class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
+    // TODO: implement initState
     super.initState();
-    animationController = new AnimationController(
-        vsync: this, duration: new Duration(seconds: 2));
-    animation =
-        new CurvedAnimation(parent: animationController, curve: Curves.easeOut);
-
-    animation.addListener(() => this.setState(() {}));
-    animationController.forward();
-
-    setState(() {
-      _visible = !_visible;
+    new Future.delayed(Duration(milliseconds: 5000)).then((val) {
+      Navigator.pushReplacementNamed(
+        context,
+        IntroPage.routeName,
+      );
     });
-    startTime();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
-        fit: StackFit.expand,
+      backgroundColor: LightTheme,
+      //backgroundColor: Colors.black.withOpacity(0.5),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          new Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+          mainLogo('assets/images/acm.png'),
+          Row(
             children: <Widget>[
-              new Image.asset(
-                'assets/images/acm.png',
-                width: animation.value * 250,
-                height: animation.value * 250,
-              ),
+              subLogos('assets/images/c++.png'),
+              subLogos('assets/images/java.png'),
+              subLogos('assets/images/python.png'),
             ],
           ),
         ],

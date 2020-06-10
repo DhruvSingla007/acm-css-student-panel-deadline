@@ -24,20 +24,32 @@ Widget infoListView({
       imageWidget(context: context, url: imageUrl),
       indNameLabel(name: name),
       indHostLabel(hostName: hostName),
+      SizedBox(
+        height: 20,
+      ),
       Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.start,
         children: <Widget>[
           buildInfoBoxes(
-            icon: Icon(Icons.access_time),
+            icon: Icon(
+              Icons.access_time,
+              color: Colors.black,
+            ),
             value: time,
           ),
           buildInfoBoxes(
-            icon: Icon(Icons.date_range),
+            icon: Icon(
+              Icons.date_range,
+              color: Colors.black,
+            ),
             value: date,
           ),
           buildInfoBoxes(
-            icon: Icon(Icons.location_on),
+            icon: Icon(
+              Icons.location_on,
+              color: Colors.black,
+            ),
             value: location,
           ),
           SizedBox(
@@ -46,6 +58,9 @@ Widget infoListView({
           aboutLine(),
           indDescriptionLabel(
             description: description,
+          ),
+          SizedBox(
+            height: 20,
           ),
           attendanceButton(
             function: attendanceButtonFunction,

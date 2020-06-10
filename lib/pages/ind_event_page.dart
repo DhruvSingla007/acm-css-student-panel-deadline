@@ -91,7 +91,7 @@ class _IndEventPageState extends State<IndEventPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Event'),
+        title: Text('Event', style: TextStyle(fontFamily: 'Montserrat')),
         centerTitle: true,
       ),
       body: infoListView(

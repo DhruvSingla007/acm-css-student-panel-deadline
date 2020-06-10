@@ -33,7 +33,7 @@ class HomePageCarousel extends StatelessWidget {
                   width: 100.0,
                   height: 50.0,
                   child: Center(
-                    child: Text('Loading...'),
+                    child: Text('Loading...', style: TextStyle(fontFamily: 'Montserrat')),
                   ),
                 ),
               ),
@@ -48,7 +48,7 @@ class HomePageCarousel extends StatelessWidget {
                   width: 100.0,
                   height: 50.0,
                   child: Center(
-                    child: Text('Loading...'),
+                    child: Text('Loading...', style: TextStyle(fontFamily: 'Montserrat')),
                   ),
                 ),
               ),
@@ -63,7 +63,7 @@ class HomePageCarousel extends StatelessWidget {
                   width: 100.0,
                   height: 50.0,
                   child: Center(
-                    child: Text('Loading...'),
+                    child: Text('Loading...', style: TextStyle(fontFamily: 'Montserrat')),
                   ),
                 ),
               ),
@@ -78,7 +78,7 @@ class HomePageCarousel extends StatelessWidget {
                   width: 100.0,
                   height: 50.0,
                   child: Center(
-                    child: Text('Loading...'),
+                    child: Text('Loading...', style: TextStyle(fontFamily: 'Montserrat')),
                   ),
                 ),
               ),
@@ -93,7 +93,7 @@ class HomePageCarousel extends StatelessWidget {
                   width: 100.0,
                   height: 50.0,
                   child: Center(
-                    child: Text('Loading...'),
+                    child: Text('Loading...', style: TextStyle(fontFamily: 'Montserrat')),
                   ),
                 ),
               ),

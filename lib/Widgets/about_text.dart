@@ -27,6 +27,7 @@ Widget aboutLineText({
                 info,
                 textAlign: TextAlign.justify,
                 style: TextStyle(
+                  fontFamily: 'Montserrat',
                   fontWeight: FontWeight.bold,
                   fontSize: 18.0,
                 ),

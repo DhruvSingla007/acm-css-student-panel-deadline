@@ -43,8 +43,8 @@ class _MyProfilePageState extends State<MyProfilePage> {
     Alert(
       style: AlertStyle(
         backgroundColor: Colors.black,
-        titleStyle: TextStyle(color: Colors.white),
-        descStyle: TextStyle(color: Colors.white),
+        titleStyle: TextStyle(fontFamily: 'Montserrat',color: Colors.white),
+        descStyle: TextStyle(fontFamily: 'Montserrat',color: Colors.white),
       ),
       context: context,
       type: AlertType.warning,
@@ -54,7 +54,7 @@ class _MyProfilePageState extends State<MyProfilePage> {
         DialogButton(
           child: Text(
             "Cancel",
-            style: TextStyle(color: Colors.white, fontSize: 20),
+            style: TextStyle(fontFamily: 'Montserrat',color: Colors.white, fontSize: 20),
           ),
           onPressed: () => Navigator.pop(context),
           gradient: LinearGradient(colors: [
@@ -65,7 +65,7 @@ class _MyProfilePageState extends State<MyProfilePage> {
         DialogButton(
           child: Text(
             "Log Out",
-            style: TextStyle(color: Colors.white, fontSize: 20),
+            style: TextStyle(fontFamily: 'Montserrat',color: Colors.white, fontSize: 20),
           ),
           onPressed: () {
             handleSignOut().then((val) {
@@ -97,6 +97,7 @@ class _MyProfilePageState extends State<MyProfilePage> {
               text,
               textAlign: TextAlign.center,
               style: TextStyle(
+                fontFamily: 'Montserrat',
                 fontSize: 18.0,
                 fontWeight: FontWeight.w500,
               ),
@@ -137,6 +138,7 @@ class _MyProfilePageState extends State<MyProfilePage> {
                     'Proficiency',
                     textAlign: TextAlign.center,
                     style: TextStyle(
+                      fontFamily: 'Montserrat',
                       fontSize: 18.0,
                       fontWeight: FontWeight.w500,
                     ),
@@ -145,6 +147,7 @@ class _MyProfilePageState extends State<MyProfilePage> {
                     'Non-Proficiency',
                     textAlign: TextAlign.center,
                     style: TextStyle(
+                      fontFamily: 'Montserrat',
                       fontSize: 18.0,
                       fontWeight: FontWeight.w500,
                     ),
@@ -177,7 +180,7 @@ class _MyProfilePageState extends State<MyProfilePage> {
     return Scaffold(
       appBar: AppBar(
         elevation: 0.0,
-        title: Text('My Profile'),
+        title: Text('My Profile', style: TextStyle(fontFamily: 'Montserrat')),
         centerTitle: true,
         actions: <Widget>[
           IconButton(

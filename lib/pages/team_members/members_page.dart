@@ -17,7 +17,7 @@ class _TeamMembersPageState extends State<TeamMembersPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: new AppBar(
-        title: new Text('Members'),
+        title: new Text('Members', style: TextStyle(fontFamily: 'Montserrat')),
         centerTitle: true,
       ),
       body: SafeArea(
@@ -61,6 +61,7 @@ class _TeamMembersPageState extends State<TeamMembersPage> {
                     child: Center(
                       child: Text(
                         'Unexpected Error Occurred',
+                          style: TextStyle(fontFamily: 'Montserrat'),
                       ),
                     ),
                   ),

@@ -1,3 +1,4 @@
+import 'package:acmcssdeadline/constants.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
@@ -19,6 +20,7 @@ class NewsListTile extends StatelessWidget {
       child: Container(
         width: MediaQuery.of(context).size.width,
         child: Card(
+          color: LightTheme,
           elevation: 8.0,
           child: Column(
             children: <Widget>[
@@ -35,6 +37,7 @@ class NewsListTile extends StatelessWidget {
                         child: Center(
                           child: Text(
                             'Loading...',
+                               style: TextStyle(fontFamily: 'Montserrat')
                           ),
                         ),
                       ),
@@ -57,6 +60,7 @@ class NewsListTile extends StatelessWidget {
                         newsTitle,
                         textAlign: TextAlign.justify,
                         style: TextStyle(
+                          fontFamily: 'Montserrat',
                           fontWeight: FontWeight.bold,
                           fontSize: 18.0,
                         ),
@@ -81,6 +85,7 @@ class NewsListTile extends StatelessWidget {
                   child: Text(
                     newsDescription,
                     textAlign: TextAlign.justify,
+                      style: TextStyle(fontFamily: 'Montserrat')
                   ),
                 ),
               ),

@@ -24,6 +24,7 @@ Widget SponsorsGridTile({
                     child: Center(
                       child: Text(
                         'Loading...',
+                           style: TextStyle(fontFamily: 'Montserrat')
                       ),
                     ),
                   ),
@@ -38,7 +39,7 @@ Widget SponsorsGridTile({
               padding: const EdgeInsets.all(8.0),
               child: Text(
                 sponsorName,
-                style: TextStyle(color: Colors.white),
+                style: TextStyle(fontFamily: 'Montserrat',color: Colors.white),
               ),
             ),
           ),

@@ -56,7 +56,7 @@ class _EventsPageState extends State<EventsPage> {
                 return Center(
                   child: Container(
                     child: Text(
-                      'No events available',
+                      'No events available', style: TextStyle(fontFamily: 'Montserrat'),
                     ),
                   ),
                 );

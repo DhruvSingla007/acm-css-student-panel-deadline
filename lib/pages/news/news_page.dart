@@ -51,6 +51,7 @@ class _NewsPageState extends State<NewsPage> {
                     child: Center(
                       child: Text(
                         'Unexpected Error Occurred',
+                           style: TextStyle(fontFamily: 'Montserrat'),
                       ),
                     ),
                   ),

@@ -57,6 +57,7 @@ class _WorkshopsPageState extends State<WorkshopsPage> {
                     child: Center(
                       child: Text(
                         'No workshops available',
+                           style: TextStyle(fontFamily: 'Montserrat')
                       ),
                     ),
                   ),

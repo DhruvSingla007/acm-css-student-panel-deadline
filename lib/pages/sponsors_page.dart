@@ -17,7 +17,7 @@ class _SponsorsPageState extends State<SponsorsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sponsors'),
+        title: Text('Sponsors', style: TextStyle(fontFamily: 'Montserrat')),
         centerTitle: true,
       ),
       body: ListView(
@@ -61,6 +61,7 @@ class _SponsorsPageState extends State<SponsorsPage> {
                       child: Center(
                         child: Text(
                           'An unexpected error has occured.',
+                             style: TextStyle(fontFamily: 'Montserrat'),
                         ),
                       ),
                     ),

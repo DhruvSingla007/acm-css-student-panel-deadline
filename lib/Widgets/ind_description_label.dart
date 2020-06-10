@@ -7,7 +7,8 @@ Widget indDescriptionLabel({@required String description}) {
       description,
       textAlign: TextAlign.justify,
       style: TextStyle(
-        color: Colors.white,
+        fontFamily: 'Montserrat',
+        //color: Colors.black,
         fontSize: 15.0,
       ),
     ),

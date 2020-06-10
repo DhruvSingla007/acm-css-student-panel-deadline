@@ -108,11 +108,11 @@ class _LoginPageState extends State<LoginPage> {
         context: context,
         builder: (context) {
           return AlertDialog(
-            title: Text('Internet Connecion Error'),
+            title: Text('Internet Connecion Error', style: TextStyle(fontFamily: 'Montserrat')),
             content: Text('Please check your internet connection'),
             actions: <Widget>[
               FlatButton(
-                child: Text('Close'),
+                child: Text('Close', style: TextStyle(fontFamily: 'Montserrat')),
                 onPressed: () {
                   Navigator.pop(context);
                 },
@@ -292,7 +292,7 @@ class _LoginPageState extends State<LoginPage> {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: <Widget>[
-                          Text('Proficiency'),
+                          Text('Proficiency', style: TextStyle(fontFamily: 'Montserrat')),
                           Switch(
                             value: isSwitched,
                             onChanged: (value) {
@@ -330,7 +330,9 @@ class _LoginPageState extends State<LoginPage> {
                             )
                           : Text(
                               'Login',
-                              style: TextStyle(fontSize: 15.0),
+                              style: TextStyle(
+                                  fontFamily: 'Montserrat',
+                                  fontSize: 15.0),
                             ),
                     ),
                   ),
@@ -340,6 +342,7 @@ class _LoginPageState extends State<LoginPage> {
                         child: Text(
                           'Please wait',
                           style: TextStyle(
+                            fontFamily: 'Montserrat',
                             color: greenColor,
                           ),
                         ),

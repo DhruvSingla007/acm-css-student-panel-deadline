@@ -12,6 +12,7 @@ Widget indHostLabel({@required String hostName}) {
     child: Text(
       'Event Host : $hostName',
       style: TextStyle(
+        fontFamily: 'Montserrat',
         color: greenColor,
         fontStyle: FontStyle.italic,
         fontSize: 15.0,

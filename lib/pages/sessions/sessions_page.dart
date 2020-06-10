@@ -18,7 +18,7 @@ class _SessionsPageState extends State<SessionsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: new AppBar(
-        title: new Text('Sessions'),
+        title: new Text('Sessions', style: TextStyle(fontFamily: 'Montserrat')),
         centerTitle: true,
       ),
       body: SafeArea(
@@ -61,6 +61,7 @@ class _SessionsPageState extends State<SessionsPage> {
                     child: Center(
                       child: Text(
                         'No sessions available',
+                           style: TextStyle(fontFamily: 'Montserrat'),
                       ),
                     ),
                   ),

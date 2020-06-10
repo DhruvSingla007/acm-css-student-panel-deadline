@@ -85,7 +85,7 @@ class _IndSessionPageState extends State<IndSessionPage> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text('Sessions'),
+        title: Text('Sessions', style: TextStyle(fontFamily: 'Montserrat')),
       ),
       body: infoListView(
         context: context,

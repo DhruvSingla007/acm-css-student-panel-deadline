@@ -36,6 +36,7 @@ class IconCard extends StatelessWidget {
               child: Text(
                 text,
                 style: TextStyle(
+                    fontFamily: 'Montserrat',
                     fontSize: 15.0,
                     color: Colors.white,
                     fontWeight: FontWeight.w500),
